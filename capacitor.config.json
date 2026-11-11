@@ -1,0 +1,12 @@
+{
+  "appId": "com.aurumai.trading",
+  "appName": "AURUM AI",
+  "webDir": "dist",
+  "android": {
+    "allowMixedContent": false,
+    "backgroundColor": "#0B0D11"
+  },
+  "server": {
+    "androidScheme": "https"
+  }
+}

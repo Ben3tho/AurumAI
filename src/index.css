@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* AURUM AI institutional dark palette */
+    --background: 222 21% 5.5%;
+    --foreground: 219 36% 96%;
+    --card: 222 24% 10%;
+    --card-foreground: 219 36% 96%;
+    --popover: 222 24% 10%;
+    --popover-foreground: 219 36% 96%;
+    --primary: 45 90% 61%;
+    --primary-foreground: 222 21% 5.5%;
+    --secondary: 225 21% 15%;
+    --secondary-foreground: 219 36% 96%;
+    --muted: 222 24% 10%;
+    --muted-foreground: 219 13% 59%;
+    --accent: 45 90% 61%;
+    --accent-foreground: 222 21% 5.5%;
+    --destructive: 0 100% 66%;
+    --destructive-foreground: 219 36% 96%;
+    --border: 219 21% 18%;
+    --input: 219 21% 18%;
+    --ring: 45 90% 61%;
+    --radius: 0.5rem;
+
+    /* AURUM semantic */
+    --surface: 222 24% 10%;
+    --surface-elevated: 225 21% 15%;
+    --hairline: 219 21% 18%;
+    --gold: 45 90% 61%;
+    --bull: 151 100% 45%;
+    --bear: 0 100% 66%;
+    --text-primary: 219 36% 96%;
+    --text-secondary: 219 13% 59%;
+
+    --font-heading: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+    --font-body: "JetBrains Mono", ui-monospace, monospace;
+    --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+    --chart-1: 45 90% 61%;
+    --chart-2: 151 100% 45%;
+    --chart-3: 0 100% 66%;
+    --chart-4: 219 13% 59%;
+    --chart-5: 225 21% 15%;
+
+    --sidebar-background: 222 21% 5.5%;
+    --sidebar-foreground: 219 36% 96%;
+    --sidebar-primary: 45 90% 61%;
+    --sidebar-primary-foreground: 222 21% 5.5%;
+    --sidebar-accent: 225 21% 15%;
+    --sidebar-accent-foreground: 219 36% 96%;
+    --sidebar-border: 219 21% 18%;
+    --sidebar-ring: 45 90% 61%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    background-color: #0B0D11;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  }
+  .font-data {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+  }
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+  .bg-gold {
+    background-color: hsl(var(--gold));
+  }
+  .text-bull {
+    color: hsl(var(--bull));
+  }
+  .text-bear {
+    color: hsl(var(--bear));
+  }
+  .hairline {
+    border: 1px solid hsl(var(--hairline));
+  }
+  .gold-glow {
+    box-shadow: 0 0 0 1px hsl(var(--gold) / 0.4), 0 0 18px -2px hsl(var(--gold) / 0.35);
+  }
+  .bull-glow {
+    box-shadow: 0 0 0 1px hsl(var(--bull) / 0.4), 0 0 18px -2px hsl(var(--bull) / 0.3);
+  }
+  .bear-glow {
+    box-shadow: 0 0 0 1px hsl(var(--bear) / 0.4), 0 0 18px -2px hsl(var(--bear) / 0.3);
+  }
+}

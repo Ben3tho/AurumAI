@@ -1,0 +1,22 @@
+{
+  "name": "CalendarCache",
+  "type": "object",
+  "properties": {
+    "raw_json": {
+      "type": "string",
+      "description": "Raw upstream ForexFactory JSON text cached for reuse"
+    },
+    "fetched_at": {
+      "type": "number",
+      "description": "Epoch ms of the last successful upstream fetch"
+    },
+    "source": {
+      "type": "string",
+      "description": "Upstream feed URL that produced raw_json"
+    }
+  },
+  "required": [
+    "raw_json",
+    "fetched_at"
+  ]
+}

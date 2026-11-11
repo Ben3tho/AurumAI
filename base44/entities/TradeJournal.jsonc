@@ -1,0 +1,120 @@
+{
+  "name": "TradeJournal",
+  "type": "object",
+  "properties": {
+    "direction": {
+      "type": "string",
+      "enum": [
+        "BUY",
+        "SELL"
+      ],
+      "description": "Trade direction"
+    },
+    "grade": {
+      "type": "string",
+      "enum": [
+        "A+",
+        "A",
+        "B",
+        "MANUAL"
+      ],
+      "description": "Sniper setup grade (A+ requires 85+ confluence)"
+    },
+    "entry_price": {
+      "type": "number",
+      "description": "Entry fill price"
+    },
+    "exit_price": {
+      "type": "number",
+      "description": "Exit fill price (0 while open)"
+    },
+    "stop_loss": {
+      "type": "number",
+      "description": "Stop loss price"
+    },
+    "take_profit_1": {
+      "type": "number",
+      "description": "TP1 target"
+    },
+    "take_profit_2": {
+      "type": "number",
+      "description": "TP2 target"
+    },
+    "take_profit_3": {
+      "type": "number",
+      "description": "TP3 target"
+    },
+    "risk_reward": {
+      "type": "number",
+      "description": "Risk-reward ratio to TP1"
+    },
+    "confidence": {
+      "type": "number",
+      "description": "Confluence score 0-100 at entry"
+    },
+    "result": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "win",
+        "loss",
+        "breakeven"
+      ],
+      "default": "pending",
+      "description": "Trade outcome"
+    },
+    "pnl_pips": {
+      "type": "number",
+      "description": "P&L in pips (exit-entry, signed for direction)"
+    },
+    "pnl_usd": {
+      "type": "number",
+      "description": "P&L in USD"
+    },
+    "lot_size": {
+      "type": "number",
+      "description": "Position size in lots"
+    },
+    "risk_percent": {
+      "type": "number",
+      "description": "Account risk percent used"
+    },
+    "timeframe_confluence": {
+      "type": "string",
+      "description": "e.g. D1=BULLISH,H4=BULLISH,H1=BULLISH,M15=BULLISH,M5=BUY"
+    },
+    "session": {
+      "type": "string",
+      "description": "Trading session at entry (London/NY/Asian)"
+    },
+    "kill_zone": {
+      "type": "string",
+      "description": "Kill zone at entry (London/NY/Off)"
+    },
+    "entry_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO entry timestamp"
+    },
+    "exit_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO exit timestamp"
+    },
+    "screenshot_timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the chart screenshot was captured"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Trader notes"
+    }
+  },
+  "required": [
+    "direction",
+    "entry_price",
+    "stop_loss",
+    "entry_time"
+  ]
+}
